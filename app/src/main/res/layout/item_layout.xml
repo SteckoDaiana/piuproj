@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:id="@+id/cardView"
+    android:layout_height="150dp">
 
     <TextView
         android:id="@+id/text"
@@ -11,5 +12,12 @@
         android:text="Ana are mere"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/isFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/ic_favorite" />
 
 </androidx.cardview.widget.CardView>

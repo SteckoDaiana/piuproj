@@ -15,7 +15,7 @@ import java.io.ObjectInput
 
 class MainActivity : AppCompatActivity() {
 
-    private var textList = mutableListOf<String>()
+    private var textList = mutableListOf<Entity>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +51,9 @@ class MainActivity : AppCompatActivity() {
                     val stringResponse = response.body?.string()
                     if (stringResponse != null) {
                         println(stringResponse)
-                        textList.add(stringResponse)
+                        val entity = Entity(stringResponse, false)
+                        //Thread.sleep(1000)
+                        textList.add(entity)
                     }
                 }
             }
@@ -59,15 +61,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun addToList(text: String) {
-        textList.add(text)
-    }
-
     private fun postToList() {
         for (i in 1..10) {
             getElement()
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -80,8 +77,12 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_delete -> Toast.makeText(this, "Delete selected", Toast.LENGTH_SHORT).show()
             R.id.nav_favorite -> Toast.makeText(this, "Favorite selected", Toast.LENGTH_SHORT)
                 .show()
-            R.id.nav_element_1 -> Toast.makeText(this, "Education selected", Toast.LENGTH_SHORT)
-                .show()
+            R.id.nav_element_1 -> {
+                this.title = "Education";
+                item.title = "random"
+                Toast.makeText(this, "Education selected", Toast.LENGTH_SHORT)
+                    .show()
+            }
             R.id.nav_element_2 -> Toast.makeText(this, "Recreational selected", Toast.LENGTH_SHORT)
                 .show()
             R.id.nav_element_3 -> Toast.makeText(this, "Social selected", Toast.LENGTH_SHORT).show()
