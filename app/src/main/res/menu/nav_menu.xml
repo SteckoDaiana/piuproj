@@ -3,49 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_delete"
-        android:icon="@drawable/ic_delete"
-        android:title="Delete selected"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/nav_favorite"
-        android:icon="@drawable/ic_favorite"
-        android:title="Favorite selected"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/nav_element_1"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="education"
         app:showAsAction="never" />
 
+
+
+
     <item
         android:id="@+id/nav_element_2"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="recreational"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/nav_element_3"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="social"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/nav_element_4"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="charity"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/nav_element_5"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="cooking"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/nav_element_6"
+        android:orderInCategory="100"
         android:icon="@drawable/vertical_ellipsis"
         android:title="music"
         app:showAsAction="never" />
